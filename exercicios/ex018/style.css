@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+/*
+    em HTML é id= em CSS é #
+    em HTML é class em CSS é .
+*/
+
+body{
+    background-color: rgb(98, 195, 164);
+    font-family: 'playwrite AU SA';
+
+}
+
+h1{
+    color: rgb(15, 69, 69);
+
+}
+
+h1#PRINCIPAL{
+    text-align: center;
+}
+
+h2{
+    color: green;
+}
+
+.basico{
+    color: gray;
+}
+
+.intermediario{
+    color: rebeccapurple;
+}
+
+.avancado{
+    color: maroon;
+    font-weight: bold;
+}
