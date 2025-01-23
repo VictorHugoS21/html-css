@@ -7,19 +7,25 @@
    <style>
     body{
         height: 100vh;
-        background-color: aqua;
+        /*background-color: aqua;
         background-image: url(imagens/wallpaper002.jpg);
         background-position: center center;
-        background-repeat: no-repeat;
+        background-repeat: repeat-y;
         background-size: cover;
+        background-attachment: fixed;*/
         /*
         o backgroung-size cover faz com que a imagem preencha toda a tela conforme ela vai se modificando 
+        shorthand - background
+            color > image > position > repeat > [size não está funcionando] > attachment (nessa ordem)
         */
+
+        background: aqua url(imagens/wallpaper002.jpg) center center repeat-y fixed;
+        background-size: cover;
     }
 
     main{
         background-color: azure;
-        width: 400px;
+        max-width: 700px;
         padding: 10px;
         margin: auto;
         border: 1px solid black;
