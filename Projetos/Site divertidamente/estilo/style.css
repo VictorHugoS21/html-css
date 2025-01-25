@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+* {
+    background-image: url(../Imagens/background.jfif);
+    background-size: cover;
+    color: white;
+}
+div.container {
+    align-content: center;
+    max-width: 550px;
+    min-width: 350px; 
+}
+
+div.carrosel {
+    display: grid;
+    grid-auto-flow: column;
+    
+    gap: 1.2rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+}
+
+div.imagem{
+    border-radius: 10px;
+    background-color: lightslategray;
+    min-height: 350px;
+    min-width: 450px;
+    scroll-snap-align: center;
+
+}
+
+div.carrosel:hover {
+    min-width: 600px;
+    max-width: 800px;
+}
+
+div#img01 {
+    background-image: url(../Imagens/alegria.jfif);
+    background-size: cover;
+}
+div#img02 {
+    background-image: url(../Imagens/medo.jfif);
+    background-size: cover;
+}
+div#img03 {
+    background-image: url(../Imagens/raiva.jfif);
+}
+div#img04 {
+    background-image: url(../Imagens/tristeza.jfif);
+}
+div#img05 {
+    background-image: url(../Imagens/Nojinho.jfif);
+}
+div#img06 {
+    background-image: url(../Imagens/Inveja.jfif);
+}
+div#img07 {
+    background-image: url(../Imagens/tédio.jfif);
+}
+div#img08 {
+    background-image: url(../Imagens/vergonha.jfif);
+}
