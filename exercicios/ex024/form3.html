@@ -7,26 +7,88 @@
 </head>
 <body>
     <h1>Teste de Formulário</h1>
-    <form action="cadastro.php" method="get" autocomplete="on">
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Dados da média</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name">
+            </p>
+            <p>
+                <label for="imedia">Média</label>
+                <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.5">
+            </p>
+            <p>
+                <label for="imes">Período Letivo</label>
+                <input type="month" name="mes" id="imes" value="2025-02">
+            </p>
+            <p>
+                <label for="idia">Dia da Prova</label>
+                <input type="date" name="dia" id="idia">
+            </p>
+            <p>
+                <label for="ihora">Horário da prova</label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+        </fieldset>
+        <form action="cadastro.php" method="post"></form>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+                <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label> <br>
+                <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol</label> <br>
+                <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label> <br>
+                <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> 
+        </fieldset>
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmas"checked><label for="isxmas">Masculino</label>
+            <input type="radio" name="sexo" id="isxfem"> <label for="isxfem">Feminino</label>   
+
+            <!-- Na tag 'radio' utiliza bolinhas para selecionar, caso você queira que o usuário selecione apenas uma das opções precisa colocar o 'name' de todas as opções iguais-->
+        </fieldset>
+        <fieldset>
+            <legend>Extras</legend>
+
+            <p>
+                <label for="icor">Cor:</label>
+                <input type="color" name="cor" id="icor" value="#00ff00">
+            </p> 
+
+            <p>
+                <label for="iniv">Nivél de satisfação:</label>
+                <input type="range" name="nivel" id="iniv" min="1" max="5" value="1">
+            </p>
+
+            <p>
+                <label for="ifoto"> Fotode perfil</label>
+                <input type="file" name="foto" id="ifoto">
+
+                <!-- Quando usar esse tipo de input é preciso usar o método 'post' pois com o método get os arquivos não são enviados-->
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend></legend>
+
+            <label for="iest">Estado</label>
+            <select name="Estado" id="iest">
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="SP" selected>São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                </optgroup>
+
+                <optgroup label="Região Norte">
+                    <option value="MA"> Maranhão</option>
+                    <option value="PE"> Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
         <p>
-            <label for="inome">Nome</label>
-            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name">
-        </p>
-        <p>
-            <label for="imedia">Média</label>
-            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.5">
-        </p>
-        <p>
-            <label for="imes">Período Letivo</label>
-            <input type="month" name="mes" id="imes" value="2025-02">
-        </p>
-        <p>
-            <label for="idia">Dia da Prova</label>
-            <input type="date" name="dia" id="idia">
-        </p>
-        <p>
-            <label for="ihora">Horário da prova</label>
-            <input type="time" name="hora" id="ihora">
+            <label for="imsg">Mensagem: </label> <br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
         </p>
         <p>
             <input type="submit" value="Enviar">
